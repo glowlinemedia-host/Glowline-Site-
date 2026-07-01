@@ -32,7 +32,13 @@ The supplied source logo is preserved at `public/glowline-original-logo.jpeg`. T
 
 ## Contact form
 
-The contact form is functional through the visitor's email app. To receive submissions without opening an email app, connect the form in `components/ContactForm.tsx` to Formspree, Resend, or EmailJS.
+The primary form action creates a formatted WhatsApp enquiry for `2769952813`. It does not open the visitor's email app.
+
+The secondary email action uses Formspree. Create a form at Formspree, then add its endpoint to your deployment environment:
+
+`NEXT_PUBLIC_FORMSPREE_ENDPOINT=https://formspree.io/f/YOUR_FORM_ID`
+
+Replace `YOUR_FORM_ID` with the value supplied by Formspree. The placeholder and replacement comment are also in `components/ContactForm.tsx`. Email submissions can then be delivered to `glowlinemedia@gmail.com` through your Formspree account.
 
 ## SEO
 

@@ -26,6 +26,11 @@ export function GrowthDesk() {
           <div className="chart-bars">{[34,46,42,63,58,79,92].map((h,i)=><i key={i} style={{height:`${h}%`}} />)}</div>
         </div>
       </div>
+      <div className="lead-strip">
+        <div className="lead-icon">WA</div>
+        <div><span className="mini-label">WHATSAPP LEADS</span><b>18 conversations started</b></div>
+        <strong>+7</strong>
+      </div>
       <div className="brand-strip">
         <div><span className="mini-label">BRAND CONSISTENCY</span><b>Everything feels like you.</b></div>
         <div className="swatches"><i/><i/><i/></div>

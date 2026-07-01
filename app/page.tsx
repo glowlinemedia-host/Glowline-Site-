@@ -6,7 +6,7 @@ import { Icon } from "@/components/Icons";
 
 const websiteLink = "https://wa.me/27769952813?text=Hi%20Glowline%20Media%2C%20I%27d%20like%20a%20quote%20for%20a%20professional%20website.";
 const socialLink = "https://wa.me/27621380450?text=Hi%20Glowline%20Media%2C%20I%27d%20like%20to%20ask%20about%20social%20media%20management.";
-const previewLink = "https://wa.me/27769952813?text=Hi%20Glowline%20Media%2C%20I%27d%20like%20to%20request%20a%20free%20website%20preview%20for%20my%20business.";
+const previewLink = "https://wa.me/2769952813?text=Hi%20Glowline%20Media%2C%20I%20would%20like%20to%20request%20a%20free%20website%20preview.";
 const websiteFeatures = ["Custom website design", "Mobile-friendly layouts", "Fast loading pages", "Website hosting", "Basic SEO setup", "WhatsApp enquiry buttons", "Ongoing support"];
 const socialFeatures = ["Social media content creation", "Monthly content planning", "Instagram and Facebook management", "Meta ads support", "Caption writing", "Brand consistency", "Performance-focused strategy"];
 
@@ -26,12 +26,13 @@ export default function Home() {
       <main>
         <section className="hero" id="home">
           <div className="hero-copy reveal">
+            <div className="hero-availability"><span>FREE PREVIEW</span><b>Available for selected South African businesses</b></div>
             <p className="eyebrow"><span /> Digital growth for South African businesses</p>
             <h1>Your business deserves to look <em>professional</em> online.</h1>
             <p className="hero-text">Glowline Media builds high-converting websites and social media strategies that help South African businesses attract more enquiries, look credible, and grow online.</p>
             <div className="hero-actions">
-              <a className="button button-dark" href={websiteLink} target="_blank" rel="noreferrer">Get a website quote <Icon name="arrow" /></a>
-              <a className="button button-outline" href={socialLink} target="_blank" rel="noreferrer">Ask about social media</a>
+              <a className="button button-dark" href={previewLink} target="_blank" rel="noreferrer">Request my free preview <Icon name="arrow" /></a>
+              <a className="button button-outline" href={websiteLink} target="_blank" rel="noreferrer">Get a website quote</a>
             </div>
             <p className="hero-proof"><span>Based in South Africa</span><span>Built around your business</span></p>
           </div>
@@ -59,7 +60,7 @@ export default function Home() {
 
         <section className="work section-pad" id="work">
           <div className="work-heading">
-            <div><p className="eyebrow"><span /> Recent directions</p><h2>See how your business could show up.</h2></div>
+            <div><p className="eyebrow"><span /> Website and content previews</p><h2>See how your business could show up.</h2></div>
             <p>These are honest sample directions created to show our range. They are not presented as commissioned client work.</p>
           </div>
           <div className="work-grid">
@@ -78,16 +79,16 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="free-preview section-pad">
+        <section className="free-preview section-pad" id="free-preview">
           <div className="preview-seal"><span>FREE</span><b>01</b><small>SELECTED<br/>BUSINESSES</small></div>
-          <div className="free-preview-copy"><p className="eyebrow"><span /> See the direction first</p><h2>Want to see what your new website could look like first?</h2><p>We can create a free website preview for selected businesses, so you can see the direction before committing.</p></div>
-          <a className="button button-dark" href={previewLink} target="_blank" rel="noreferrer">Request a free preview <Icon name="arrow" /></a>
+          <div className="free-preview-copy"><p className="eyebrow light"><span /> See the direction first</p><h2>See what your new website could look like before you commit.</h2><p>We create free website previews for selected South African businesses, so you can see the direction before making a decision.</p><div className="preview-benefits"><span>Designed around your business</span><span>No generic templates</span><span>Clear next step, no pressure</span></div></div>
+          <div className="preview-action"><a className="button button-blue" href={previewLink} target="_blank" rel="noreferrer">Request My Free Preview <Icon name="arrow" /></a><small>Share your business name and what you offer. We will take it from there.</small></div>
         </section>
 
         <section className="services section-pad" id="services">
           <div className="services-intro">
             <p className="eyebrow light"><span /> Two sides. One stronger brand.</p>
-            <h2>Your digital presence, handled with intention.</h2>
+            <h2>Websites and social media built to bring in better enquiries.</h2>
             <p>Choose the support you need today, or bring your website and social channels together under one clear direction.</p>
           </div>
           <div className="service-pair">
@@ -135,7 +136,7 @@ export default function Home() {
         </section>
 
         <section className="faq section-pad" id="faq">
-          <div className="faq-intro"><p className="eyebrow light"><span /> Good questions, clear answers</p><h2>Before we get started.</h2><p>No agency fog. Here are the practical answers most business owners need first.</p></div>
+          <div className="faq-intro"><p className="eyebrow light"><span /> Good questions, clear answers</p><h2>Questions business owners ask before starting.</h2><p>No agency fog. Here are the practical answers most business owners need first.</p></div>
           <div className="faq-list">
             <details open><summary><span>01</span>How much does a website cost?<i>+</i></summary><p>Professional Glowline Media websites start from R3,500. The final quote depends on the number of pages, features, content support, and any special integrations you need.</p></details>
             <details><summary><span>02</span>Do you offer hosting?<i>+</i></summary><p>Yes. Hosting and maintenance plans start from R500 per month, with ongoing support to keep your website running smoothly.</p></details>
@@ -158,7 +159,7 @@ export default function Home() {
             <div className="contact-lines">
               <a href={websiteLink} target="_blank" rel="noreferrer"><span>WEBSITES & HOSTING</span><b>076 995 2813</b></a>
               <a href={socialLink} target="_blank" rel="noreferrer"><span>SOCIAL MEDIA & MARKETING</span><b>062 138 0450</b></a>
-              <a href="mailto:glowlinemedia@gmail.com"><span>EMAIL</span><b>glowlinemedia@gmail.com</b></a>
+              <div><span>EMAIL</span><b>glowlinemedia@gmail.com</b></div>
               <div><span>LOCATION</span><b>South Africa</b></div>
             </div>
           </div>
@@ -166,8 +167,8 @@ export default function Home() {
         </section>
       </main>
       <footer>
-        <div className="footer-main"><Brand inverse /><p>Helping Businesses Grow Online</p><a href="#home" aria-label="Back to top">Back to top ↑</a></div>
-        <div className="footer-bottom"><span>Website Development <i>•</i> Hosting <i>•</i> Social Media Management <i>•</i> Digital Marketing</span><span>© {new Date().getFullYear()} Glowline Media. All rights reserved.</span></div>
+        <div className="footer-main"><Brand inverse /><p>Helping Businesses Grow Online</p><a href="#home" aria-label="Back to top">Back to top &uarr;</a></div>
+        <div className="footer-bottom"><span>Website Development <i>&bull;</i> Hosting <i>&bull;</i> Social Media Management <i>&bull;</i> Digital Marketing</span><span>&copy; {new Date().getFullYear()} Glowline Media. All rights reserved.</span></div>
       </footer>
     </>
   );

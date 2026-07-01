@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Icon } from "@/components/Icons";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://glowlinemedia.co.za";
@@ -46,7 +47,11 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-ZA">
-      <body>{children}</body>
+      <body>
+        {children}
+        <a className="floating-whatsapp" href="https://wa.me/2769952813?text=Hi%20Glowline%20Media%2C%20I%20would%20like%20to%20enquire." target="_blank" rel="noreferrer" aria-label="Chat with Glowline Media on WhatsApp"><span>Chat on WhatsApp</span><i><Icon name="whatsapp" /></i></a>
+        <a className="mobile-sticky-cta" href="https://wa.me/2769952813?text=Hi%20Glowline%20Media%2C%20I%20would%20like%20to%20request%20a%20free%20website%20preview." target="_blank" rel="noreferrer">Get a Free Preview <Icon name="arrow" /></a>
+      </body>
     </html>
   );
 }
