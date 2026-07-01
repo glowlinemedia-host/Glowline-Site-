@@ -6,6 +6,7 @@ import { Icon } from "@/components/Icons";
 
 const websiteLink = "https://wa.me/27769952813?text=Hi%20Glowline%20Media%2C%20I%27d%20like%20a%20quote%20for%20a%20professional%20website.";
 const socialLink = "https://wa.me/27621380450?text=Hi%20Glowline%20Media%2C%20I%27d%20like%20to%20ask%20about%20social%20media%20management.";
+const previewLink = "https://wa.me/27769952813?text=Hi%20Glowline%20Media%2C%20I%27d%20like%20to%20request%20a%20free%20website%20preview%20for%20my%20business.";
 const websiteFeatures = ["Custom website design", "Mobile-friendly layouts", "Fast loading pages", "Website hosting", "Basic SEO setup", "WhatsApp enquiry buttons", "Ongoing support"];
 const socialFeatures = ["Social media content creation", "Monthly content planning", "Instagram and Facebook management", "Meta ads support", "Caption writing", "Brand consistency", "Performance-focused strategy"];
 
@@ -37,6 +38,12 @@ export default function Home() {
           <div className="hero-visual reveal delay-1"><GrowthDesk /></div>
         </section>
 
+        <section className="offer-band" aria-label="Website offer">
+          <div className="offer-price"><span>WEBSITE DEVELOPMENT</span><strong>From R3,500</strong></div>
+          <div className="offer-copy"><h2>Professional websites for South African businesses.</h2><p>Built to look credible, load fast, and turn visitors into WhatsApp enquiries.</p></div>
+          <a className="button button-blue" href={websiteLink} target="_blank" rel="noreferrer">Get my website quote <Icon name="arrow" /></a>
+        </section>
+
         <section className="problem section-pad" aria-labelledby="problem-title">
           <div className="section-heading">
             <p className="eyebrow"><span /> The credibility gap</p>
@@ -50,6 +57,33 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="work section-pad" id="work">
+          <div className="work-heading">
+            <div><p className="eyebrow"><span /> Recent directions</p><h2>See how your business could show up.</h2></div>
+            <p>These are honest sample directions created to show our range. They are not presented as commissioned client work.</p>
+          </div>
+          <div className="work-grid">
+            <article className="work-card">
+              <div className="work-visual service-preview"><span className="preview-label">SAMPLE DIRECTION 01</span><div className="preview-nav"><i/><i/></div><div className="preview-hero"><b>Reliable service.<br/>Right when you need it.</b><i/></div><div className="preview-foot"><i/><i/><i/></div></div>
+              <div className="work-meta"><span>Website preview</span><h3>Local service business website</h3><p>Clear services, visible trust signals, and a direct route to WhatsApp.</p></div>
+            </article>
+            <article className="work-card featured">
+              <div className="work-visual shop-preview"><span className="preview-label">SAMPLE DIRECTION 02</span><div className="shop-title">The everyday collection.</div><div className="product-row"><i/><i/><i/></div><div className="shop-line"><span>Browse by product</span><b>View catalogue →</b></div></div>
+              <div className="work-meta"><span>Catalogue preview</span><h3>E-commerce product catalogue</h3><p>A clean product journey that makes browsing simple and buying feel natural.</p></div>
+            </article>
+            <article className="work-card">
+              <div className="work-visual social-preview"><span className="preview-label">SAMPLE DIRECTION 03</span><div className="social-grid"><i/><i/><i/><i/></div><div className="social-plan"><span>CONTENT SYSTEM</span><b>12 posts planned</b></div></div>
+              <div className="work-meta"><span>Content preview</span><h3>Social media content system</h3><p>A repeatable visual system for consistent, recognisable monthly content.</p></div>
+            </article>
+          </div>
+        </section>
+
+        <section className="free-preview section-pad">
+          <div className="preview-seal"><span>FREE</span><b>01</b><small>SELECTED<br/>BUSINESSES</small></div>
+          <div className="free-preview-copy"><p className="eyebrow"><span /> See the direction first</p><h2>Want to see what your new website could look like first?</h2><p>We can create a free website preview for selected businesses, so you can see the direction before committing.</p></div>
+          <a className="button button-dark" href={previewLink} target="_blank" rel="noreferrer">Request a free preview <Icon name="arrow" /></a>
+        </section>
+
         <section className="services section-pad" id="services">
           <div className="services-intro">
             <p className="eyebrow light"><span /> Two sides. One stronger brand.</p>
@@ -58,17 +92,22 @@ export default function Home() {
           </div>
           <div className="service-pair">
             <article className="service-card cream" id="websites">
-              <div className="service-index">01 / WEBSITES</div><h3>Website Development <span>& Hosting</span></h3>
+              <div className="service-index">01 / WEBSITES <b>FROM R3,500</b></div><h3>Website Development <span>& Hosting</span></h3>
               <p>We design modern, mobile-friendly websites that make your business look credible and help turn visitors into enquiries.</p>
               <ul>{websiteFeatures.map(item=><li key={item}><Icon name="check" />{item}</li>)}</ul>
               <a className="text-link" href={websiteLink} target="_blank" rel="noreferrer">Start my website <Icon name="arrow" /></a>
             </article>
             <article className="service-card blue" id="social-media">
-              <div className="service-index">02 / SOCIAL & MARKETING</div><h3>Social Media <span>& Digital Marketing</span></h3>
+              <div className="service-index">02 / SOCIAL & MARKETING <b>CUSTOM MONTHLY PACKAGES</b></div><h3>Social Media <span>& Digital Marketing</span></h3>
               <p>We help your brand show up consistently with strategic content, clean visuals, and marketing that builds trust with your audience.</p>
               <ul>{socialFeatures.map(item=><li key={item}><Icon name="check" />{item}</li>)}</ul>
               <a className="text-link" href={socialLink} target="_blank" rel="noreferrer">Grow my socials <Icon name="arrow" /></a>
             </article>
+          </div>
+          <div className="price-anchors" aria-label="Starting prices">
+            <div><span>01</span><p>Website Development</p><strong>From R3,500</strong></div>
+            <div><span>02</span><p>Hosting & Maintenance</p><strong>From R500 <small>per month</small></strong></div>
+            <div><span>03</span><p>Social Media Management</p><strong>Custom monthly packages</strong></div>
           </div>
           <p className="seo-note">From small business websites and website hosting in South Africa to Meta ads management and consistent social content, every part is designed to support real business growth.</p>
         </section>
@@ -86,7 +125,23 @@ export default function Home() {
         <section className="process section-pad">
           <div className="section-heading narrow"><p className="eyebrow"><span /> How it works</p><h2>Simple process. Professional result.</h2></div>
           <div className="process-track">
-            {["We understand your business", "We plan your online presence", "We design and build", "We launch and help you grow"].map((step,i)=><article key={step}><span>{String(i+1).padStart(2,"0")}</span><h3>{step}</h3><i /></article>)}
+            {[
+              ["Discovery", "We learn about your business, audience, and goals."],
+              ["Direction", "We plan the pages, content, and visual style."],
+              ["Build", "We design your website or content system."],
+              ["Launch", "We connect WhatsApp, hosting, SEO basics, and tracking."],
+            ].map(([step,copy],i)=><article key={step}><span>{String(i+1).padStart(2,"0")}</span><h3>{step}</h3><p>{copy}</p><i /></article>)}
+          </div>
+        </section>
+
+        <section className="faq section-pad" id="faq">
+          <div className="faq-intro"><p className="eyebrow light"><span /> Good questions, clear answers</p><h2>Before we get started.</h2><p>No agency fog. Here are the practical answers most business owners need first.</p></div>
+          <div className="faq-list">
+            <details open><summary><span>01</span>How much does a website cost?<i>+</i></summary><p>Professional Glowline Media websites start from R3,500. The final quote depends on the number of pages, features, content support, and any special integrations you need.</p></details>
+            <details><summary><span>02</span>Do you offer hosting?<i>+</i></summary><p>Yes. Hosting and maintenance plans start from R500 per month, with ongoing support to keep your website running smoothly.</p></details>
+            <details><summary><span>03</span>Can you manage my social media every month?<i>+</i></summary><p>Yes. We offer custom monthly packages for content planning, design, captions, Facebook and Instagram management, and Meta ads support.</p></details>
+            <details><summary><span>04</span>Do you work with businesses outside Johannesburg?<i>+</i></summary><p>Yes. We work remotely with businesses across South Africa. Meetings, feedback, content, and approvals can all be handled online.</p></details>
+            <details><summary><span>05</span>How long does a website take?<i>+</i></summary><p>Most small business websites take around two to four weeks once we have the required content and feedback. We confirm a realistic timeline before work begins.</p></details>
           </div>
         </section>
 
